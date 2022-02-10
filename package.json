@@ -12,7 +12,9 @@
     "test": "jest",
     "lint-staged": "yarn lint && yarn format",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "storyshots": "NODE_ENV=test jest --config ./jest.storyshots.config.js",
+    "update-storyshots": "NODE_ENV=test jest --config ./jest.storyshots.config.js --updateSnapshot"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
