@@ -44,8 +44,6 @@ module.exports = {
         max: 1,
       },
     ],
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'never'],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
     'semi-style': ['error', 'last'],
