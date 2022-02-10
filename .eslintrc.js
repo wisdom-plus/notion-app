@@ -35,10 +35,10 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'never'],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
-    'semi-style': ['error', 'first'],
+    'semi-style': ['error', 'last'],
     'semi-spacing': ['error', { after: true, before: false }],
     semi: 'off',
-    '@typescript-eslint/semi': ['error', 'never', { beforeStatementContinuationChars: 'never' }],
+    '@typescript-eslint/semi': ['error', 'always'],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': ['error'],
     'space-before-function-paren': 'off',
@@ -46,19 +46,6 @@ module.exports = {
     'no-undef': 'off',
     'no-useless-catch': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'comma',
-          requireLast: false,
-        },
-        singleline: {
-          delimiter: 'comma',
-          requireLast: false,
-        },
-      },
-    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/explicit-member-accessibility': ['warn', { accessibility: 'explicit' }],
     'no-unexpected-multiline': 'error',
