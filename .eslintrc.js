@@ -12,6 +12,7 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -24,21 +25,37 @@ module.exports = {
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
   rules: {
     'import/no-anonymous-default-export': 'off',
-    'import/order': ['error', { alphabetize: { order: 'asc' } }],
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc',
+        },
+      },
+    ],
     '@next/next/no-img-element': 'off',
     '@typescript-eslint/ban-types': 'warn',
     quotes: ['error', 'single'],
     'space-in-parens': ['error', 'never'],
     'no-multi-spaces': 'error',
-    'no-multiple-empty-lines': ['error', { max: 1 }],
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'never'],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+      },
+    ],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
-    'semi-style': ['error', 'first'],
-    'semi-spacing': ['error', { after: true, before: false }],
+    'semi-style': ['error', 'last'],
+    'semi-spacing': [
+      'error',
+      {
+        after: true,
+        before: false,
+      },
+    ],
     semi: 'off',
-    '@typescript-eslint/semi': ['error', 'never', { beforeStatementContinuationChars: 'never' }],
+    '@typescript-eslint/semi': ['error', 'always'],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': ['error'],
     'space-before-function-paren': 'off',
@@ -46,21 +63,13 @@ module.exports = {
     'no-undef': 'off',
     'no-useless-catch': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-member-accessibility': [
+      'warn',
       {
-        multiline: {
-          delimiter: 'comma',
-          requireLast: false,
-        },
-        singleline: {
-          delimiter: 'comma',
-          requireLast: false,
-        },
+        accessibility: 'explicit',
       },
     ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/explicit-member-accessibility': ['warn', { accessibility: 'explicit' }],
     'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
   },
